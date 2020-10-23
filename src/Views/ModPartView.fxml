@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="Controller.ModPartController"
+          prefHeight="600.0" prefWidth="1000.0">
+    <AnchorPane prefHeight="600.0" prefWidth="1000.0">
+        <children>
+            <Label layoutX="146.0" layoutY="57.0" text="Modify Part">
+                <font>
+                    <Font name="Arial Bold" size="14.0" />
+                </font>
+            </Label>
+            <RadioButton fx:id="InHouseRb" layoutX="333.0" layoutY="64.0" onAction="#handleTypeToggle" selected="true" text="InHouse Part" />
+            <RadioButton fx:id="OutsourcedRb" layoutX="524.0" layoutY="64.0" onAction="#handleTypeToggle" text="Outsourced Part" />
+
+            <Label fx:id="modPartIdLbl" layoutX="228.0" layoutY="119.0" prefHeight="17.0" prefWidth="21.0" text="ID" />
+            <TextField fx:id="modPartIdInput" disable="true" editable="false" layoutX="333.0" layoutY="114.0"/>
+
+            <Label fx:id="modPartNameLbl" layoutX="228.0" layoutY="164.0" text="Name" />
+            <TextField fx:id="modPartNameInput" layoutX="333.0" layoutY="159.0" />
+
+            <Label fx:id="modPartStockLbl" layoutX="228.0" layoutY="212.0" text="Inventory" />
+            <TextField fx:id="modPartStockInput" layoutX="333.0" layoutY="207.0" />
+
+            <Label fx:id="modPartPriceLbl" layoutX="228.0" layoutY="264.0" text="Price" />
+            <TextField fx:id="modPartPriceInput" layoutX="333.0" layoutY="259.0" />
+
+            <Label fx:id="modPartMinLbl" layoutX="524.0" layoutY="313.0" text="Min" />
+            <TextField fx:id="modPartMinInput" layoutX="563.0" layoutY="308.0" prefHeight="27.0" prefWidth="161.0" />
+
+            <Label fx:id="modPartMaxLbl" layoutX="228.0" layoutY="313.0" text="Max" />
+            <TextField fx:id="modPartMaxInput" layoutX="333.0" layoutY="308.0" maxHeight="27.0" prefHeight="27.0" prefWidth="161.0" />
+
+            <Label fx:id="modPartVariantLbl" layoutX="228.0" layoutY="358.0" text="Machine ID" />
+            <TextField fx:id="modPartVariantInput" layoutX="333.0" layoutY="353.0" />
+
+            <ButtonBar layoutX="405.0" layoutY="448.0" prefHeight="40.0" prefWidth="161.0">
+                <buttons>
+                    <Button fx:id="save" onAction="#handleModSaveBtn" text="Save" />
+                    <Button fx:id="cancel" onAction="#handleModCancelBtn" text="Cancel" />
+                </buttons>
+            </ButtonBar>
+        </children>
+    </AnchorPane>
+
+
+</GridPane>
