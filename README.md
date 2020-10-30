@@ -1,5 +1,5 @@
 # Java Inventory App
-A basic Inventory App for C482 - Software I at WGU.
+A basic Inventory App for school project.
 
 Written in Java and utilizing JavaFX. 
 
